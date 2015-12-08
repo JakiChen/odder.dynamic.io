@@ -111,8 +111,8 @@ angular.module('oohDear.controllers', [])
 			/*alert("大屏请求产品: " + index + "唯一ID") ;*/
 			swapLink();
 			setTimeout(function(){
-				$(".page-cont").children().eq(index-2).removeClass("slide-down-out");
-				$(".page-cont").children().eq(index-2).prev().removeClass("slide-down");
+				$(".page-cont").children().eq(index).removeClass("slide-down-out");
+				$(".page-cont").children().eq(index).prev().removeClass("slide-down");
 			},500);
 		}else{
 			//close cover
