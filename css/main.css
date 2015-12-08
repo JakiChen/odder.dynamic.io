@@ -60,8 +60,6 @@ ul,li{
     left: 50%;
     margin-left: -53px;
     z-index: 3500;
-	/*Gradient border */
-	
 	-webkit-animation-name: rotate;
 	-webkit-animation-duration: 3s;
 	-webkit-animation-iteration-count: infinite;

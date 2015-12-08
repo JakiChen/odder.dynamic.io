@@ -57,6 +57,7 @@ angular.module('oohDear.controllers', [])
 		setTimeout(function(){
 			$(".cover-page").removeClass("off");
 		},500);
+		$state.go("oohdear")
 	}
 	/*
 	*
@@ -89,6 +90,7 @@ angular.module('oohDear.controllers', [])
 			//init class name
 			setTimeout(initPage(),100);
 		}
+		$state.go("oohdear");
 		return index;
 	}
 	
@@ -122,6 +124,7 @@ angular.module('oohDear.controllers', [])
 			//init class name
 			setTimeout(initPage(),100);
 		}
+		$state.go("oohdear");
 		return index;
 	}
 	//open the cover

@@ -1,3 +1,7 @@
+
+
+BaseURL = "http://jakichen.github.io/ireader"; 
+
 angular.module('oohDear.services', [])
 
 .factory('Chats', function() {
