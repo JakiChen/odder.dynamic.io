@@ -1,14 +1,19 @@
-
-
 angular.module('oohDear.controllers', [])
-.controller('oohdearCtrl', function($scope, productsService) {
-	//Bind the data to the html
-	productsService.GetBoxInfo().success(function(data, status, headers, config){
-		$scope.boxinfo = data;
+
+.controller('oohdearCtrl', function($scope, $stateParams, $http, $interval, $state) {
+	//初始化页面结构
+	$http.defaults.headers.common["X-Custom-Header"] = "Angular.js";
+	// box info
+	$http.get(	BaseURL + '/shop/'+ $stateParams.boxID +'/info.json'	)
+		 .success(function(data, status, headers, config){
+			$scope.boxinfo = data;
 	});
-	productsService.GetProductsList().success(function(data, status, headers, config){
-		$scope.productsList = data;
+	//box products
+	$http.get(	BaseURL + '/shop/'+ $stateParams.boxID +'/products.json'	)
+		 .success(function(data, status, headers, config){
+			$scope.productsList = data;
 	});
+	
 	
 	//Global var
 	var totalPage = 3;
@@ -47,6 +52,7 @@ angular.module('oohDear.controllers', [])
 	*
 	*/
 	function openCover(){
+		
 		$(".cover-page").removeClass("off");
 		$(".cover-page").addClass("on");
 		$(".page-cont").children(".page").first().addClass("slide-up");
@@ -160,4 +166,9 @@ angular.module('oohDear.controllers', [])
 		slideDown();
 	};
 	
+});
+
+
+/*ionic.DomUtil.ready(function(){
+  
 });
