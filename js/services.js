@@ -1,4 +1,4 @@
-var BaseURL = "http://JakiChen.github.io/oohdear_dynamic_data"; 
+var BaseURL = "http://jakichen.github.io/odder.dynamic.io"; 
 
 angular.module('oohDear.services', [])
 .factory('productsService', function($http, $stateParams, $state) {
