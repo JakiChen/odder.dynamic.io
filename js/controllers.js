@@ -11,7 +11,7 @@ angular.module('oohDear.controllers', [])
 	});
 	
 	//Global var
-	var totalPage = 3;
+	var totalPage = 1;
 	var index = 1;
 	var i=0;
 	//init z-index
@@ -53,9 +53,9 @@ angular.module('oohDear.controllers', [])
 		/*alert("大屏请求list－item: " + index + " ID") ;*/
 		swapLink();
 		setTimeout(function(){
+			totalPage = $(".page-cont").children(".page").length;
 			$(".page-cont").children(".page").first().removeClass("slide-up");
-		},500);
-	
+		},800);
 	}
 	/*-------------------------------------------------------------------
 	*

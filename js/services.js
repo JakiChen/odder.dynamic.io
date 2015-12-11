@@ -1,4 +1,4 @@
-var BaseURL = "http://jakichen.github.io/odder.dynamic.io"; 
+var BaseURL = "http://10.10.2.71:8888"; 
 
 angular.module('oohDear.services', [])
 .factory('productsService', function($http, $stateParams, $state) {
