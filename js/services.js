@@ -7,13 +7,11 @@ angular.module('oohDear.services', [])
 		GetProductsList: function() {
 			  return $http.get(BaseURL + '/shop/'+ $stateParams.boxID +'/products.json')
 			  .success(function(data, status, headers, config){
-				  	console.log($stateParams.boxID);
-					console.log(data)
+					console.log(data
 					return data;
 			  })
 			  .error(function(data, status, headers,config){
 					 console.log('data error');
-					 $state.go("/blank");
 			  });
 		},
 		GetBoxInfo: function(){
