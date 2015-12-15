@@ -1,7 +1,7 @@
-var BaseURL = "http://10.10.2.71:8888"; 
+var BaseURL = "http://jakichen.github.io/odder.dynamic.io"; 
 
 angular.module('oohDear.services', [])
-.factory('productsService', function($http, $stateParams, $state) {
+.factory('productsService', function($http, $stateParams, $state) { 
 	$http.defaults.headers.common["X-Custom-Header"] = "Angular.js";
 	return {
 		GetProductsList: function() {
